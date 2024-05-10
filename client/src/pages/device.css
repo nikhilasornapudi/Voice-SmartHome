@@ -1,0 +1,319 @@
+.body {
+    background-image: url('/Users/nikhilasornapudi/voice_auto/client/src/assets/shas.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.device-header{
+    padding: 0.5rem, 1rem;
+    justify-content: start;
+    align-items: flex-end;
+    margin-top:30px;
+    position: absolute;
+    top: 0;
+    left: 990px;
+    width: 100%;
+    height: 100%;
+}
+
+.device-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.device-header a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 7px solid #fe6d02;
+
+}
+.device-popup {
+  --burger-line-width: 1.125em;
+  --burger-line-height: 0.125em;
+  --burger-offset: 0.625em;
+  --burger-bg: rgba(0, 0, 0, .15);
+  --burger-color: #333;
+  --burger-line-border-radius: 0.1875em;
+  --burger-diameter: 2.125em;
+  --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
+  --burger-line-transition: .3s;
+  --burger-transition: all .1s ease-in-out;
+  --burger-hover-scale: 1.1;
+  --burger-active-scale: .95;
+  --burger-enable-outline-color: var(--burger-bg);
+  --burger-enable-outline-width: 0.125em;
+  --burger-enable-outline-offset: var(--burger-enable-outline-width);
+  /* nav */
+  --nav-padding-x: 0.25em;
+  --nav-padding-y: 0.625em;
+  --nav-border-radius: 0.375em;
+  --nav-border-color: #ccc;
+  --nav-border-width: 0.0625em;
+  --nav-shadow-color: rgba(0, 0, 0, .2);
+  --nav-shadow-width: 0 1px 5px;
+  --nav-bg: #eee;
+  --nav-font-family: Menlo, Roboto Mono, monospace;
+  --nav-default-scale: .8;
+  --nav-active-scale: 1;
+  --nav-position-left: 0;
+  --nav-position-right: unset;
+  /* if you want to change sides just switch one property */
+  /* from properties to "unset" and the other to 0 */
+  /* title */
+  --nav-title-size: 0.625em;
+  --nav-title-color: #777;
+  --nav-title-padding-x: 1rem;
+  --nav-title-padding-y: 0.25em;
+  /* nav button */
+  --nav-button-padding-x: 1rem;
+  --nav-button-padding-y: 0.375em;
+  --nav-button-border-radius: 0.375em;
+  --nav-button-font-size: 12px;
+  --nav-button-hover-bg: #6495ed;
+  --nav-button-hover-text-color: #fff;
+  --nav-button-distance: 0.875em;
+  /* underline */
+  --underline-border-width: 0.0625em;
+  --underline-border-color: #ccc;
+  --underline-margin-y: 0.3125em;
+}
+
+/* popup settings 👆 */
+
+.device-popup {
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+.device-popup input {
+  display: none;
+}
+
+.device-burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: var(--burger-bg);
+  width: var(--burger-diameter);
+  height: var(--burger-diameter);
+  border-radius: var(--burger-btn-border-radius);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--burger-transition);
+  outline: var(--burger-enable-outline-width) solid transparent;
+  outline-offset: 0;
+}
+
+.device-burger span {
+  height: var(--burger-line-height);
+  width: var(--burger-line-width);
+  background: var(--burger-color);
+  border-radius: var(--burger-line-border-radius);
+  position: absolute;
+  transition: var(--burger-line-transition);
+}
+
+.device-burger span:nth-child(1) {
+  top: var(--burger-offset);
+}
+
+.device-burger span:nth-child(2) {
+  bottom: var(--burger-offset);
+}
+
+.device-burger span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.device-popup-window {
+  transform: scale(var(--nav-default-scale));
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: var(--nav-padding-y) var(--nav-padding-x);
+  background: var(--nav-bg);
+  font-family: var(--nav-font-family);
+  color: var(--nav-text-color);
+  border-radius: var(--nav-border-radius);
+  box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
+  border: var(--nav-border-width) solid var(--nav-border-color);
+  top: calc(var(--burger-diameter) + var(--burger-enable-outline-width) + var(--burger-enable-outline-offset));
+  left: var(--nav-position-left);
+  right: var(--nav-position-right);
+  transition: var(--burger-transition);
+}
+
+.device-popup-window legend,
+.device-popup-window hr {
+  display: none;
+}
+
+.device-popup-window ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.device-popup-window ul button {
+  outline: none;
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  color: var(--burger-color);
+  font-size: var(--nav-button-font-size);
+  padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
+  white-space: nowrap;
+  border-radius: var(--nav-button-border-radius);
+  cursor: pointer;
+  column-gap: var(--nav-button-distance);
+}
+
+.device-popup-window ul button svg { /* Style the logout icon */
+  fill: var(--burger-color); /* Adjust color as needed */
+} 
+
+/* actions */
+
+.device-popup-window ul button:hover,
+.device-popup-window ul button:focus-visible {
+  color: var(--nav-button-hover-text-color);
+  background: var(--nav-button-hover-bg);
+}
+
+.device-burger:hover {
+  transform: scale(var(--burger-hover-scale));
+}
+
+.device-burger:active {
+  transform: scale(var(--burger-active-scale));
+}
+
+.device-burger:focus:not(:hover) {
+  outline-color: var(--burger-enable-outline-color);
+  outline-offset: var(--burger-enable-outline-offset);
+}
+
+.device-popup input:checked+.burger span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.device-popup input:checked+.burger span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.device-popup input:checked+.burger span:nth-child(3) {
+  transform: translateX(calc(var(--burger-diameter) * -1 - var(--burger-line-width)));
+}
+
+.device-popup input:checked~nav {
+  transform: scale(var(--nav-active-scale));
+  visibility: visible;
+  opacity: 1;
+}
+
+.device-navigation a {
+    background-color: #fe6d02;  /* Your desired background color */
+    padding: 5px 10px;          /* Adjust padding values as needed */
+    border-radius: 10px;
+
+}
+
+.device_container {
+    font-family: fantasy; font-size: 20px; font-style: normal; font-variant: small-caps; font-weight: 600; line-height: 44px; line-height: 18.5714px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    width: 90%; /* Limiting width to not span entire view width */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+    background: rgba(255, 255, 255, 0.9); /* Background color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 200px; /* Adjusted margin */
+    margin-bottom: 350px;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.dialog {
+    position: fixed; /* Dialog is positioned relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensures it's above other content */
+    width: 300px; /* Fixed width */
+    text-align: center; /* Centering text */
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+li {
+    color: rgb(0, 0, 0);
+    background: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right:10px;
+
+}
+
+input[type="text"], input[type="checkbox"] {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #ddd; 
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-right:10px;
+}
+
+button {
+  background-color: #45a049;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fe6d02; /* Slightly darker green on hover */
+}
+
+
